@@ -1,11 +1,11 @@
 // Constants used as the base for Prestige exponential bonuses.
-const PRESTIGE_COMBAT_BASE       = 1.20;
-const PRESTIGE_PHYSICAL_BASE     = 1.20;
-const PRESTIGE_MENTAL_BASE       = 1.20;
-const PRESTIGE_BARTERING_BASE    = 1.10;
-const PRESTIGE_SPATIOMANCY_BASE  = 1.10;
-const PRESTIGE_CHRONOMANCY_BASE  = 1.05;
-const PRESTIGE_EXP_OVERFLOW_BASE = 1.00222;
+const PRESTIGE_COMBAT_BASE       = 1.25;
+const PRESTIGE_PHYSICAL_BASE     = 1.25;
+const PRESTIGE_MENTAL_BASE       = 1.25;
+const PRESTIGE_BARTERING_BASE    = 1.25;
+const PRESTIGE_SPATIOMANCY_BASE  = 1.25;
+const PRESTIGE_CHRONOMANCY_BASE  = 1.25;
+const PRESTIGE_EXP_OVERFLOW_BASE = 1.05;
 
 // All prestige button functions
 function completedCurrentGame() {
