@@ -5,7 +5,7 @@ const PRESTIGE_MENTAL_BASE       = 1.25;
 const PRESTIGE_BARTERING_BASE    = 1.25;
 const PRESTIGE_SPATIOMANCY_BASE  = 1.25;
 const PRESTIGE_CHRONOMANCY_BASE  = 1.25;
-const PRESTIGE_EXP_OVERFLOW_BASE = 1.05;
+const PRESTIGE_EXP_OVERFLOW_BASE = 1.01;
 
 // All prestige button functions
 function completedCurrentGame() {
