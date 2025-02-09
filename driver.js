@@ -18,14 +18,14 @@ function getSpeedMult(zone = curTown) {
 
     // Dark Ritual
     if (zone === 0) speedMult *= getRitualBonus(0, 20, 10);
-    else if (zone === 1) speedMult *= getRitualBonus(20, 40, 5);
-    else if (zone === 2) speedMult *= getRitualBonus(40, 60, 2.5);
-    else if (zone === 3) speedMult *= getRitualBonus(60, 80, 1.5);
-    else if (zone === 4) speedMult *= getRitualBonus(80, 100, 1);
-    else if (zone === 5) speedMult *= getRitualBonus(100, 150, .5);
-    else if (zone === 6) speedMult *= getRitualBonus(150, 200, .5);
-    else if (zone === 7) speedMult *= getRitualBonus(200, 250, .5);
-    else if (zone === 8) speedMult *= getRitualBonus(250, 300, .5);
+    else if (zone === 1) speedMult *= getRitualBonus(20, 40, 7.5);
+    else if (zone === 2) speedMult *= getRitualBonus(40, 60, 6);
+    else if (zone === 3) speedMult *= getRitualBonus(60, 80, 5.5);
+    else if (zone === 4) speedMult *= getRitualBonus(80, 100, 5);
+    else if (zone === 5) speedMult *= getRitualBonus(100, 150, 1.6);
+    else if (zone === 6) speedMult *= getRitualBonus(150, 200, 1.4);
+    else if (zone === 7) speedMult *= getRitualBonus(200, 250, 1.2);
+    else if (zone === 8) speedMult *= getRitualBonus(250, 300, 1);
     speedMult *= getRitualBonus(300, 666, .181967);
     
     // Chronomancy
