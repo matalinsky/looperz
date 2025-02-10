@@ -29,7 +29,7 @@ function getSpeedMult(zone = curTown) {
     speedMult *= getRitualBonus(300, 666, .181967);
     
     // Chronomancy
-    speedMult *= getSkillBonus("Chronomancy");
+    speedMult *= (getSkillBonus("Chronomancy")*1.5);
     
     // Imbue Soul
     speedMult *= 1 + 0.5 * getBuffLevel("Imbuement3");
