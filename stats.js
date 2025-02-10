@@ -608,7 +608,7 @@ function addExp(name, amount) {
 
 function restartStats() {
     for (let i = 0; i < statList.length; i++) {
-        if(getSkillLevel("Wunderkind") > 0) stats[statList[i]].statLevelExp.setLevel(getBuffLevel("Imbuement2") * 2);
+        if(getSkillLevel("Wunderkind") > 0) stats[statList[i]].statLevelExp.setLevel(getBuffLevel("Imbuement2") * 10);
         else stats[statList[i]].statLevelExp.setLevel(getBuffLevel("Imbuement2"));
     }
     view.requestUpdate("updateStats", true);
