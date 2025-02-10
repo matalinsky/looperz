@@ -4359,7 +4359,7 @@ Action.ImbueMind = new MultipartAction("Imbue Mind", {
     grantsBuff: "Imbuement",
     loopsFinished() {
         const spent = sacrificeSoulstones(this.goldCost());
-        trainingLimits++;
+        trainingLimits += 10;
         addBuffAmt("Imbuement", 1, this, "soulstone", spent);
         view.requestUpdate("updateSoulstones", null);
         view.requestUpdate("adjustGoldCost", {varName: "ImbueMind", cost: this.goldCost()});
