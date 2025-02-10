@@ -1098,7 +1098,7 @@ function doLoad(toLoad) {
             completedActions.push(action);
         });
     completedActions.push("FoundGlasses");
-    trainingLimits = 10 + getBuffLevel("Imbuement");
+    trainingLimits = 500 + getBuffLevel("Imbuement");
     goldInvested = toLoad.goldInvested === undefined ? 0 : toLoad.goldInvested;
     stonesUsed = toLoad.stonesUsed === undefined ? {1:0, 3:0, 5:0, 6:0} : toLoad.stonesUsed;
 
