@@ -12,8 +12,8 @@ function completedCurrentGame() {
     console.log("completed current prestige")
 
     if (!prestigeValues["completedCurrentPrestige"]) {
-        prestigeValues["prestigeCurrentPoints"]    += 90;
-        prestigeValues["prestigeTotalPoints"]      += 90;
+        prestigeValues["prestigeCurrentPoints"]    += 110;
+        prestigeValues["prestigeTotalPoints"]      += 110;
         prestigeValues["prestigeTotalCompletions"] += 1;
         prestigeValues["completedCurrentPrestige"] = true;
         prestigeValues["completedAnyPrestige"]     = true;
