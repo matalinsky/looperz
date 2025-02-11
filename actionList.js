@@ -5526,7 +5526,7 @@ function getFrostGiantsRank(offset) {
         "Vice Admiral"          //godlike
     ][Math.floor(curFightFrostGiantsSegment / 3 + 0.00001)];
     const segment = (offset === undefined ? 0 : offset - (curFightFrostGiantsSegment % 3)) + curFightFrostGiantsSegment;
-    let bonus = precision3(1 + 0.05 * Math.pow(segment, 1.05));
+    let bonus = precision3(1 + 0.25 * Math.pow(segment, 1.05));
     if (name) {
         if (offset === undefined) {
             name += ["-", "", "+"][curFightFrostGiantsSegment % 3];
