@@ -5557,7 +5557,7 @@ Action.SeekBlessing = new Action("Seek Blessing", {
         Luck: 0.5
     },
     skills: {
-        Divine: 150
+        Divine: 250
     },
     canStart() {
         return resources.pegasus;
@@ -5755,7 +5755,7 @@ Action.ManaWell = new Action("Mana Well", {
         return towns[5].getLevel("Meander") >= 2;
     },
     goldCost() { // in this case, "amount of mana in well"
-        return Math.max(5000 - Math.floor(10 * effectiveTime), 0);
+        return Math.max(5000 - Math.floor(2 * effectiveTime), 0);
     },
     finish() {
         towns[5].finishRegular(this.varName, 100, () => {
@@ -5856,7 +5856,7 @@ Action.RaiseZombie = new Action("Raise Zombie", {
 
 Action.DarkSacrifice = new Action("Dark Sacrifice", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 5,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -5870,7 +5870,7 @@ Action.DarkSacrifice = new Action("Dark Sacrifice", {
         Soul: 0.8
     },
     skills: {
-        Commune: 100
+        Commune: 300
     },
     canStart() {
         return resources.blood >= 1;
@@ -6303,7 +6303,7 @@ Action.RescueSurvivors = new MultipartAction("Rescue Survivors", {
 
 Action.PrepareBuffet = new Action("Prepare Buffet", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 6,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -6320,8 +6320,8 @@ Action.PrepareBuffet = new Action("Prepare Buffet", {
         Int: 0.6
     },
     skills: {
-        Alchemy: 25,
-        Gluttony: 5
+        Alchemy: 50,
+        Gluttony: 25
     },
     canStart() {
         return resources.herbs >= 10 && resources.blood > 0;
@@ -6351,7 +6351,7 @@ Action.PrepareBuffet = new Action("Prepare Buffet", {
 
 Action.Totem = new Action("Totem", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 6,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -6367,7 +6367,7 @@ Action.Totem = new Action("Totem", {
         Soul: 0.5
     },
     skills: {
-        Wunderkind: 100
+        Wunderkind: 500
     },
     canStart() {
         return resources.loopingPotion;
@@ -6407,7 +6407,7 @@ Action.Escape = new Action("Escape", {
     },
     canStart() {
         if (escapeStarted) return true;
-        else if (effectiveTime < 60) {
+        else if (effectiveTime < 120) {
             escapeStarted = true;
             return true;
         }
@@ -6821,7 +6821,7 @@ Action.PickPockets = new Action("Pick Pockets", {
     },
     skills: {
         Thievery() {
-            return 10 * (1 + towns[7].getLevel("PickPockets") / 100);
+            return 20 * (1 + towns[7].getLevel("PickPockets") / 100);
         }
     },
     affectedBy: ["Thieves Guild"],
@@ -6876,7 +6876,7 @@ Action.RobWarehouse = new Action("Rob Warehouse", {
     },
     skills: {
         Thievery() {
-            return 20 * (1 + towns[7].getLevel("RobWarehouse") / 100);
+            return 40 * (1 + towns[7].getLevel("RobWarehouse") / 100);
         }
     },
     affectedBy: ["Thieves Guild"],
@@ -6931,7 +6931,7 @@ Action.InsuranceFraud = new Action("Insurance Fraud", {
     },
     skills: {
         Thievery() {
-            return 40 * (1 + towns[7].getLevel("InsuranceFraud") / 100);
+            return 60 * (1 + towns[7].getLevel("InsuranceFraud") / 100);
         }
     },
     affectedBy: ["Thieves Guild"],
@@ -7121,7 +7121,7 @@ Action.CollectInterest = new Action("Collect Interest", {
 
 Action.Seminar = new Action("Seminar", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 7,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -7137,7 +7137,7 @@ Action.Seminar = new Action("Seminar", {
         Soul: 0.1
     },
     skills: {
-        Leadership: 200
+        Leadership: 300
     },
     manaCost() {
         return 20000;
