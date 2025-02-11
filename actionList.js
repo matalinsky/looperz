@@ -5579,7 +5579,7 @@ Action.SeekBlessing = new Action("Seek Blessing", {
         setStoryFlag("blessingSought");
         if (getFrostGiantsRank().bonus >= 10) setStoryFlag("greatBlessingSought");
         // @ts-ignore
-        this.skills.Divine = Math.floor(50 * getFrostGiantsRank().bonus);
+        this.skills.Divine = Math.floor(250 * getFrostGiantsRank().bonus);
         handleSkillExp(this.skills);
     },
 });
