@@ -1345,7 +1345,7 @@ Action.ThrowParty = new Action("Throw Party", {
 
 Action.WarriorLessons = new Action("Warrior Lessons", {
     type: "normal",
-    expMult: 1.5,
+    expMult: 2,
     townNum: 0,
     storyReqs(storyNum) {
         switch (storyNum) {
@@ -1391,7 +1391,7 @@ Action.WarriorLessons = new Action("Warrior Lessons", {
 
 Action.MageLessons = new Action("Mage Lessons", {
     type: "normal",
-    expMult: 1.5,
+    expMult: 2,
     townNum: 0,
     storyReqs(storyNum) {
         switch (storyNum) {
@@ -2188,7 +2188,7 @@ Action.TalkToHermit = new Action("Talk To Hermit", {
 
 Action.PracticalMagic = new Action("Practical Magic", {
     type: "normal",
-    expMult: 1.5,
+    expMult: 2,
     townNum: 1,
     storyReqs(storyNum) {
         switch (storyNum) {
@@ -2228,7 +2228,7 @@ Action.PracticalMagic = new Action("Practical Magic", {
 
 Action.LearnAlchemy = new Action("Learn Alchemy", {
     type: "normal",
-    expMult: 1.5,
+    expMult: 2,
     townNum: 1,
     storyReqs(storyNum) {
         switch (storyNum) {
@@ -2250,7 +2250,7 @@ Action.LearnAlchemy = new Action("Learn Alchemy", {
     },
     skills: {
         Magic: 50,
-        Alchemy: 50
+        Alchemy: 100
     },
     canStart() {
         return resources.herbs >= 10;
@@ -2297,7 +2297,7 @@ Action.BrewPotions = new Action("Brew Potions", {
     },
     skills: {
         Magic: 50,
-        Alchemy: 25
+        Alchemy: 50
     },
     canStart() {
         return resources.herbs >= 10 && resources.reputation >= 5;
@@ -2571,7 +2571,7 @@ Action.TalkToWitch = new Action("Talk To Witch", {
 
 Action.DarkMagic = new Action("Dark Magic", {
     type: "normal",
-    expMult: 1.5,
+    expMult: 2,
     townNum: 1,
     storyReqs(storyNum) {
         switch (storyNum) {
@@ -3426,7 +3426,7 @@ Action.CraftArmor = new Action("Craft Armor", {
 
 Action.Apprentice = new Action("Apprentice", {
     type: "progress",
-    expMult: 1.5,
+    expMult: 2,
     townNum: 2,
     storyReqs(storyNum) {
         switch (storyNum) {
@@ -3454,7 +3454,7 @@ Action.Apprentice = new Action("Apprentice", {
     },
     skills: {
         Crafting() {
-            return 10 * (1 + towns[2].getLevel("Apprentice") / 100);
+            return 20 * (1 + towns[2].getLevel("Apprentice") / 100);
         }
     },
     affectedBy: ["Crafting Guild"],
@@ -3507,7 +3507,7 @@ Action.Mason = new Action("Mason", {
     },
     skills: {
         Crafting() {
-            return 20 * (1 + towns[2].getLevel("Mason") / 100);
+            return 40 * (1 + towns[2].getLevel("Mason") / 100);
         }
     },
     affectedBy: ["Crafting Guild"],
@@ -3560,7 +3560,7 @@ Action.Architect = new Action("Architect", {
     },
     skills: {
         Crafting() {
-            return 40 * (1 + towns[2].getLevel("Architect") / 100);
+            return 60 * (1 + towns[2].getLevel("Architect") / 100);
         }
     },
     affectedBy: ["Crafting Guild"],
@@ -4531,10 +4531,10 @@ Action.Guru = new Action("Guru", {
         return 100000;
     },
     cost() {
-        addResource("herbs", -1000);
+        addResource("herbs", -300);
     },
     canStart() {
-        return resources.herbs >= 1000;
+        return resources.herbs >= 300;
     },
     visible() {
         return getExploreProgress() > 75;
@@ -4899,7 +4899,7 @@ Action.GiftArtifact = new Action("Gift Artifact", {
 
 Action.Mercantilism = new Action("Mercantilism", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 4,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -4915,7 +4915,7 @@ Action.Mercantilism = new Action("Mercantilism", {
         Soul: 0.1
     },
     skills: {
-        Mercantilism: 100
+        Mercantilism: 300
     },
     canStart() {
         return resources.reputation > 0;
@@ -5164,7 +5164,7 @@ function getWizCollegeRank(offset) {
 
 Action.Restoration = new Action("Restoration", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 4,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -5202,7 +5202,7 @@ Action.Restoration = new Action("Restoration", {
 
 Action.Spatiomancy = new Action("Spatiomancy", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 4,
     storyReqs(storyNum) {
         switch(storyNum) {
@@ -5557,7 +5557,7 @@ Action.SeekBlessing = new Action("Seek Blessing", {
         Luck: 0.5
     },
     skills: {
-        Divine: 50
+        Divine: 150
     },
     canStart() {
         return resources.pegasus;
