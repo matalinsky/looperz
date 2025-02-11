@@ -7351,10 +7351,10 @@ Action.ImbueSoul = new MultipartAction("Imbue Soul", {
             stats[stat].soulstone = 0;
             view.requestUpdate("updateStat", stat);
         }
-        buffs["Imbuement"].amt = 0;
-        buffs["Imbuement2"].amt = 0;
-        trainingLimits = 10;
-        addBuffAmt("Imbuement3", 1, this, "imbuement3");
+	addBuffAmt("Imbuement3", 1, this, "imbuement3");
+        buffs["Imbuement"].amt = 30 + buffs["Imbuement3"].amt * 10;
+        buffs["Imbuement2"].amt = 30 + buffs["Imbuement3"].amt * 10;
+        trainingLimits = 500;
         view.updateBuffs();
         view.updateStats();
         view.requestUpdate("updateSoulstones", null);
