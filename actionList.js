@@ -6984,7 +6984,7 @@ Action.GuildAssassin = new Action("Guild Assassin", {
         Luck: 0.2
     },
     skills: {
-        Assassin: 100
+        Assassin: 500
     },
     manaCost() {
         return 100000;
@@ -7169,7 +7169,7 @@ Action.Seminar = new Action("Seminar", {
 
 Action.PurchaseKey = new Action("Purchase Key", {
     type: "normal",
-    expMult: 1,
+    expMult: 2,
     townNum: 7,
     storyReqs(storyNum) {
         switch(storyNum) {
