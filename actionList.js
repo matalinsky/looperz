@@ -3316,7 +3316,7 @@ Action.CraftingGuild = new MultipartAction("Crafting Guild", {
         return 1;
     },
     canStart() {
-        return guild === "";
+        return resources.gold >= 250 && getSkillLevel("Practical") >= 100;
     },
     loopCost(segment, loopCounter = towns[2][`${this.varName}LoopCounter`]) {
         return precision3(Math.pow(1.2, loopCounter + segment)) * 2e6;
@@ -5557,7 +5557,7 @@ Action.SeekBlessing = new Action("Seek Blessing", {
         Luck: 0.5
     },
     skills: {
-        Divine: 250
+        Divine: 500
     },
     canStart() {
         return resources.pegasus;
