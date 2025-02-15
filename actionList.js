@@ -2207,7 +2207,8 @@ Action.PracticalMagic = new Action("Practical Magic", {
         Int: 0.5
     },
     skills: {
-        Practical: 100 + getSkillLevel("Magic")/100
+        Practical: 100,
+	getSkillLevel("Magic")/100
     },
     manaCost() {
         return Math.ceil(4000 * (1 - towns[1].getLevel("Hermit") * 0.005));
