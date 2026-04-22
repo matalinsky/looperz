@@ -26,7 +26,7 @@ function getSpeedMult(zone = curTown) {
     else if (zone === 6) speedMult *= getRitualBonus(150, 200, 1.4);
     else if (zone === 7) speedMult *= getRitualBonus(200, 250, 1.2);
     else if (zone === 8) speedMult *= getRitualBonus(250, 300, 1);
-    speedMult *= getRitualBonus(300, 666, .181967);
+    speedMult *= getRitualBonus(300, 666, .274);
     
     // Chronomancy
     speedMult *= (getSkillBonus("Chronomancy")*1.5);
