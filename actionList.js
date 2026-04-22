@@ -7109,7 +7109,7 @@ Action.CollectInterest = new Action("Collect Interest", {
     },
     finish() {
         handleSkillExp(this.skills);
-        let interestGold = Math.floor(goldInvested * .001);
+        let interestGold = Math.floor(goldInvested * .01);
         addResource("gold", interestGold);
         setStoryFlag("interestCollected");
         if (interestGold >= 1000) setStoryFlag("collected1KInterest");
