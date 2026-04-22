@@ -818,7 +818,7 @@ Action.Map = new Action("Map", {
         return getExploreProgress() > 0;
     },
     goldCost() {
-        return 15;
+        return 1;
     },
     finish() {
         addResource("gold", -this.goldCost());
